@@ -37,6 +37,12 @@ bool sprawdzCzyZyje()
         return true;
     }
 }
+void update()
+{
+    glod+=4;
+    szczenscie-=5;
+    energia-=3;
+}
 int main()
 {
     cout<<"By zobaczyc komendy wpisz 'menu'\n";
@@ -49,25 +55,26 @@ int main()
         if (energia>100) energia=100;
         if (stan==true) pokazStan();
         stan=true;
-        glod+=4;
-        szczenscie-=5;
-        energia-=3;
 
         // Fukncjonatoinator
         cout<<"Podaj funkcje\n";
         cin>>funkcja;
         if (funkcja == "nakarm") {
             nakarm();
+            update();
         } else if (funkcja == "zabawa") {
             zabawa();
+            update();
         } else if (funkcja == "odpoczynek") {
             odpoczynek();
+            update();
         } else if (funkcja == "stan") {
             pokazStan();
+            update();
         } else if (funkcja == "menu") {
             menu();
         } else if (funkcja == "czekaj") {
-            // Czekanie do kolejnej tury
+            update();
         } else if (funkcja == "wyjdz") {
             return 0;
         } else {
