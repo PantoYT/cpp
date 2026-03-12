@@ -10,7 +10,7 @@ int main()
         a[i] = n;
     }
     for (int i = 4;i>-1;i--) {
-        cout<<a;
+        cout<<a[i]<<" ";
     }
 
 }
