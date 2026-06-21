@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int top(int t[], int n) {
+    return t[0];
+}
+
+void pop(int t[], int &n) {
+    t[0] = t[n - 1];
+    n--;
+    int i = 0;
+    while (true) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        if (left < n && t[left] > t[largest]) {
+            largest = left;
+        }
+        if (right < n && t[right] > t[largest]) {
+            largest = right;
+        }
+        if (largest == i) {
+            break;
+        }
+        int temp = t[i];
+        t[i] = t[largest];
+        t[largest] = temp;
+
+        i = largest;
+    }
+}
+void push(int t[], int &n, int e) {
+    t[n] = e;
+    int i = n;
+    n++;
+    while (i > 0) {
+        int parent = (i - 1) / 2;
+        if (t[i] > t[parent]) {
+            int temp = t[i];
+            t[i] = t[parent];
+            t[parent] = temp;
+            i = parent;
+        } else {
+            break;
+        }
+    }
+}
