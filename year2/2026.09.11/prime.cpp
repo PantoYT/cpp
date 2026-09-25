@@ -14,8 +14,8 @@ bool czy_pierwsza(int n) {
 
 int main() {
     std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
-    std::cout.tie(NULL);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
     int n, out;
     if (cin >> n) {
         out = czy_pierwsza(n);

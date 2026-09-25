@@ -1,0 +1,21 @@
+Zad 1
+Zdefiniuj funkcję, która wypisuje dzielniki danej liczby, nazwij ją
+dzielniki(int n)
+
+Zad 2
+Zdefiniuj funkcję, która wypisuje dzielniki właściwe danej liczby, 
+nazwij ją dzielniki_wlasciwe(int n)
+
+Zad 3
+Zdefinij funkjcę, suma_dzielnikow(int n) której parametrem jest liczba
+naturalna, a wynikiem suma dzielników tej liczby sprawdź dla 
+suma_dzielnikow od 7 (8), 16 (31)
+
+Zad 4
+Liczby zaprzyjaźnione to dwie liczby naturlane, z których każda jest 
+równa sumie dzielników właściwych drugiej liczby
+Suma dzielników liczby 220, wynosi np. 284 suma dzielników właściwych
+liczby 284 wynosi 220
+
+Zdefiniuj funkcję zaprzyjaznione(int n) której parametrem jest liczba naturlana n, a wynikiem ma być
+mniejsza liczba  z n-tej pary liczb zaprzyjaźnionych
